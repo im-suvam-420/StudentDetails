@@ -1,0 +1,48 @@
+<html xmlns:th="http://www.thymeLeaf.org">
+<body>
+<div align="center">
+
+<h1><b><big><h1><u>STUDENTS LIST</u></h1></big></b></h1><b>
+
+</b><b><br></b><b>
+
+</b><a href="/new"><b>Add New Student</b></a><b>
+	
+</b><table border="1" cellpadding="10"><b>
+
+</b><thead><b>
+
+</b><tr><b>
+
+</b><td><b><i><p align="justify">ID</p></i></b></td><b>
+</b><td><b><i><p align="justify">NAME</p></i></b></td><b>
+</b><td><b><i><p align="justify">ROLL NUMBER</p></i></b></td><b>
+</b><td><b><i><p align="justify">ADDRESS</p></i></b></td><b>
+</b><td><b><i><p>ACTIONS</p></i></b></td><b>
+
+</b></tr><b>
+	
+</b></thead><b>
+
+</b><tbody><b>
+
+</b><tr th:each="student : ${student}"><b>
+		</b><td th:text="${student.id}"><b>id</b></td><b>
+		</b><td th:text="${student.studentName}"><b>studentName</b></td><b>
+		</b><td th:text="${student.studentRollNumber}"><b>studentRollNumber</b></td><b>
+		</b><td th:text="${student.address}"><b>address</b></td><b>
+		</b><td><b>
+		</b><a th:href="@{'/edit/'+${student.id}}"><b>Edit</b></a><b>
+		&nbsp;
+		</b><a th:href="@{'/delete/'+${student.id}}"><b>Delete</b></a><b>
+		</b></td><b>
+</b></tr><b>
+
+
+</b></tbody><b>
+
+</b></table><b>
+
+</b></div><b>
+</b></body><b>
+</b></html>
