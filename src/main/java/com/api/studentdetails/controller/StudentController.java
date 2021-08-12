@@ -22,8 +22,7 @@ public class StudentController {
 	//Declaration
 	@Autowired
 	StudentService studentService;
-	
-	
+
 	/**
 	 * This method is for retrieving 
 	 * All Student Details Record 
@@ -35,7 +34,7 @@ public class StudentController {
 	public ModelAndView student(Model model) {
 		return studentService.getAllStudent();
 	}
-	
+
 	/**
 	 * This Method is for crating new Student Details Record
 	 * 
@@ -47,7 +46,7 @@ public class StudentController {
 		Student student=new Student();
 		return studentService.addStudent(student);
 	}
-	
+
 	/**
 	 * This method is  for both creating and
 	 * updating one student details
@@ -58,9 +57,9 @@ public class StudentController {
 	@PostMapping(value = "add")
 	public String student(Student student) {
 		studentService.student(student);
-		return "The Ongoing Process Is Done. Please Check The List. Thank You :)";
+		return "The Ongoing Process Is Done. Please Check The List. Thank You 🙂";
 	}
-	
+
 	/**
 	 * This method is for editing One Student Details
 	 * 
@@ -71,7 +70,7 @@ public class StudentController {
 	public ModelAndView editForm(@PathVariable("id")int id) {
 		return studentService.editStudent(id);
 	}
-	
+
 	/**
 	 * This method is for deleting One Student Details Record.
 	 * 
@@ -81,6 +80,6 @@ public class StudentController {
 	@RequestMapping("/delete/{id}")
 	public String deleteStudent(@PathVariable("id")int id) {
 		studentService.deleteStudent(id);
-		return "The Student Is Deleted. Thank You!! :(";
+		return "The Student Is Deleted. Thank You!! 😭";
 	}
 }
