@@ -67,7 +67,7 @@ public class StudentController {
 	 * @return Student Details for the given Id
 	 */
 	@RequestMapping("/edit/{id}")
-	public ModelAndView editForm(@PathVariable("id")int id) {
+	public ModelAndView editForm(@PathVariable("id")Integer id) {
 		return studentService.editStudent(id);
 	}
 
@@ -78,7 +78,7 @@ public class StudentController {
 	 * @return Response For The Ongoing Process
 	 */
 	@RequestMapping("/delete/{id}")
-	public String deleteStudent(@PathVariable("id")int id) {
+	public String deleteStudent(@PathVariable("id")Integer id) {
 		studentService.deleteStudent(id);
 		return "The Student Is Deleted. Thank You!! 😭";
 	}

@@ -62,7 +62,7 @@ public class StudentServiceImpl implements StudentService{
 	 * This method is for editing One Student Details
 	 */
 	@Override
-	public ModelAndView editStudent(int id) {
+	public ModelAndView editStudent(Integer id) {
 		ModelAndView mv = new ModelAndView("edit_student");
 		Optional<Student>student=studentRepository.findById(id);
 		if(student.isPresent()) {
@@ -78,7 +78,7 @@ public class StudentServiceImpl implements StudentService{
 	 * This method is for deleting One Student Details Record.
 	 */
 	@Override
-	public void deleteStudent(int id) {
+	public void deleteStudent(Integer id) {
 		Optional<Student>student=studentRepository.findById(id);
 		if(student.isPresent()) {
 		studentRepository.deleteById(id);

@@ -18,6 +18,7 @@
 </b><td><b><i><p align="justify">NAME</p></i></b></td><b>
 </b><td><b><i><p align="justify">ROLL NUMBER</p></i></b></td><b>
 </b><td><b><i><p align="justify">ADDRESS</p></i></b></td><b>
+</b><td><b><i><p align="justify">BOOK</p></i></b></td><b>
 </b><td><b><i><p>ACTIONS</p></i></b></td><b>
 
 </b></tr><b>
@@ -31,6 +32,7 @@
 		</b><td th:text="${student.studentName}"><b>studentName</b></td><b>
 		</b><td th:text="${student.studentRollNumber}"><b>studentRollNumber</b></td><b>
 		</b><td th:text="${student.address}"><b>address</b></td><b>
+		</b><td th:text="${student.book}"><b>book</b></td><b>
 		</b><td><b>
 		</b><a th:href="@{'/edit/'+${student.id}}"><b>Edit</b></a><b>
 		&nbsp;

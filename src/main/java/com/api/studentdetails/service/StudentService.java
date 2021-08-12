@@ -13,9 +13,9 @@ public interface StudentService {
 
 	public ModelAndView addStudent(Student student);
 
-	public ModelAndView editStudent(int id);
+	public ModelAndView editStudent(Integer id);
 	
-	public void deleteStudent(int id);
+	public void deleteStudent(Integer id);
 
 	public void student(Student student);
 
