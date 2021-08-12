@@ -28,22 +28,22 @@ public class BookController {
 	public List<Book> getAllBook(){
 		return bookService.getAllBook();
 	}
-	
+
 	@GetMapping("/book/{id}")
 	public Book getBookById(@PathVariable Integer id) {
 		return bookService.getBookById(id);
 	}
-	
+
 	@PostMapping("/book")
 	public void addBook(@RequestBody Book book) {
 		bookService.addBook(book);
 	}
-	
+
 	@PutMapping("/book{id}")
 	public void updateBook(@RequestBody Book book,@PathVariable Integer id) {
 		bookService.updateStudent(id,book);
 	}
-	
+
 	@DeleteMapping("/book/{id}")
 	public void deleteStudent(@PathVariable Integer id) {
 		bookService.deleteStudent(id);
