@@ -14,6 +14,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+/**
+ * This is Entity class which will contain the table and columns in table to be created
+ *
+ */
 public class Student implements Serializable{
 
 	/**
